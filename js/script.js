@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function() {
     'use strict';
 
-    //Timer
+    //Timer Block
     function countTimer(deadline) { //Время, до которого отсчитывать
         let timerHours = document.querySelector('#timer-hours'),
             timerMinutes = document.querySelector('#timer-minutes'),
@@ -53,14 +53,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
     countTimer('30 June 2020'); //передаем дату
 
-    //Menu
+    //Toggle Menu
     const toggleMenu = () => {
 
         const btnMenu = document.querySelector('.menu'),
-            menu = document.querySelector('menu'),
-            closeBtn = document.querySelector('.close-btn'),
-            menuItems = menu.querySelectorAll('ul > li'),
-            anchors = document.querySelectorAll('a[href*="#"]');
+            menu = document.querySelector('menu');
 
         /*Handler Menu Function*/
         const handlerMenu = () => {
@@ -69,10 +66,24 @@ window.addEventListener('DOMContentLoaded', function() {
 
         /*Menu Button*/
         btnMenu.addEventListener('click', handlerMenu);
-        /*Close Button*/
-        closeBtn.addEventListener('click', handlerMenu);
-        /*Close to click menu item*/
-        menuItems.forEach((elem) => elem.addEventListener('click', handlerMenu));
+
+        /*Close Button and close click menu item*/
+        menu.addEventListener('click', (event) => {
+            let target = event.target;
+            target = target.closest('a[href*="#"]');
+            if (target) {
+                handlerMenu();
+            }
+        });
+
+    };
+
+    toggleMenu();
+
+    //Scroll Anchors
+    const scrollAnchors = () => {
+
+        const anchors = document.querySelectorAll('a[href*="#"]');
 
         /*Anchors of items*/
         anchors.forEach((item) => item.addEventListener('click', (event) => {
@@ -84,47 +95,92 @@ window.addEventListener('DOMContentLoaded', function() {
 
     };
 
-    toggleMenu();
+    scrollAnchors();
 
-    //Popup
-    const togglePopup = () => {
+    //popUp Block
+    const togglePopUp = () => {
 
-        const popup = document.querySelector('.popup'),
-            popupBtn = document.querySelectorAll('.popup-btn'),
-            popupClose = document.querySelector('.popup-close'),
-            popupContent = document.querySelector('.popup-content');
+        const popUp = document.querySelector('.popup'),
+            popUpBtn = document.querySelectorAll('.popup-btn'),
+            popUpContent = document.querySelector('.popup-content');
 
-        /*Popup Animation*/
+        /*popUp Animation*/
         let flyInterval,
             count = 0;
         let flyAnimate = function() {
             flyInterval = requestAnimationFrame(flyAnimate);
             count++;
             if (count < 100) {
-                popupContent.style.top = count + 'px';
+                popUpContent.style.top = count + 'px';
             } else {
                cancelAnimationFrame(flyInterval);
             }
         };
 
-        /*Open Popup*/
-        popupBtn.forEach((elem) => {
+        /*Open popUp*/
+        popUpBtn.forEach((elem) => {
             elem.addEventListener('click', () => {
-                popup.style.display = 'block';
+                popUp.style.display = 'block';
                 if (screen.availWidth >= 768) {
                     flyInterval = requestAnimationFrame(flyAnimate);
                 }
             });
         });
-        /*Close Popup*/
-        popupClose.addEventListener('click', () => {
-            popup.style.display = 'none';
+
+        /*Close popUp*/
+        popUp.addEventListener('click', (event) => {
+            let target = event.target;
+
+            if (target.classList.contains('popup-close')) {
+                popUp.style.display = 'none';
+            } else {
+                target = target.closest('.popup-content');
+                if (!target) {
+                    popUp.style.display = 'none';
+                }
+            }
+
         });
 
     };
 
-    togglePopup();
+    togglePopUp();
 
+    //Tabs Block
+    const tabs = () => {
+
+        const tabHeader = document.querySelector('.service-header'),
+            tab = tabHeader.querySelectorAll('.service-header-tab'),
+            tabContent = document.querySelectorAll('.service-tab');
+
+        const toggleTabContent = (index) => {
+            for (let i = 0; i < tabContent.length; i++) {
+                if (index === i) {
+                    tab[i].classList.add('active');
+                    tabContent[i].classList.remove('d-none');
+                } else {
+                    tab[i].classList.remove('active');
+                    tabContent[i].classList.add('d-none');
+                }
+            }
+        };
+
+        tabHeader.addEventListener('click', (event) => {
+            let target = event.target;
+            target = target.closest('.service-header-tab');
+
+            if (target) {
+                tab.forEach((item, i) => {
+                    if (item === target) {
+                        toggleTabContent(i);
+                    }
+                });
+            }
+        });
+
+    };
+
+    tabs();
 
 });
 
