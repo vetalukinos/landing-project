@@ -30,7 +30,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js-lesson-14-first/js/script.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lawyer/templates/lawyer/js/app.js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -69,7 +69,7 @@
       <updated>1587471591348</updated>
       <workItem from="1587471592417" duration="9275000" />
       <workItem from="1587480899981" duration="5868000" />
-      <workItem from="1587539363003" duration="7340000" />
+      <workItem from="1587539363003" duration="11554000" />
     </task>
     <task id="LOCAL-00001" summary="fix 18 lesson">
       <created>1587486956934</created>
@@ -78,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587486956934</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix 19 lesson">
+      <created>1587552825977</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587552825977</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +108,7 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="fix 18 lesson" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix 18 lesson" />
+    <MESSAGE value="fix 19 lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 19 lesson" />
   </component>
 </project>

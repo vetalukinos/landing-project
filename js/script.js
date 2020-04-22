@@ -59,7 +59,8 @@ window.addEventListener('DOMContentLoaded', function() {
         const btnMenu = document.querySelector('.menu'),
             menu = document.querySelector('menu'),
             closeBtn = document.querySelector('.close-btn'),
-            menuItems = menu.querySelectorAll('ul > li');
+            menuItems = menu.querySelectorAll('ul > li'),
+            anchors = document.querySelectorAll('a[href*="#"]');
 
         /*Handler Menu Function*/
         const handlerMenu = () => {
@@ -73,6 +74,13 @@ window.addEventListener('DOMContentLoaded', function() {
         /*Close to click menu item*/
         menuItems.forEach((elem) => elem.addEventListener('click', handlerMenu));
 
+        /*Anchors of items*/
+        anchors.forEach((item) => item.addEventListener('click', (event) => {
+                event.preventDefault();
+                const blockScroll = item.getAttribute('href').substr(1);
+                document.getElementById(blockScroll).scrollIntoView({block: "center", behavior: "smooth"})
+            })
+        );
 
     };
 
