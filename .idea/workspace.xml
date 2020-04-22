@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ee89c64-2d00-4e55-a3a8-34339c0b8c87" name="Default Changelist" comment="" />
+    <list default="true" id="6ee89c64-2d00-4e55-a3a8-34339c0b8c87" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,11 +19,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\OSPanel\domains\js-landing-project\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1aqmeI421aNbW8KnEzfQ4qvvKJi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js-lesson/index.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js-lesson-14-first/js/script.js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -58,8 +68,17 @@
       <option name="presentableId" value="Default" />
       <updated>1587471591348</updated>
       <workItem from="1587471592417" duration="9275000" />
-      <workItem from="1587480899981" duration="5400000" />
+      <workItem from="1587480899981" duration="5868000" />
+      <workItem from="1587539363003" duration="7340000" />
     </task>
+    <task id="LOCAL-00001" summary="fix 18 lesson">
+      <created>1587486956934</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587486956934</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -70,10 +89,18 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="fix 18 lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 18 lesson" />
   </component>
 </project>
