@@ -198,20 +198,22 @@ window.addEventListener('DOMContentLoaded', function() {
     const slider = () => {
         const slide = document.querySelectorAll('.portfolio-item'),
             btn = document.querySelectorAll('.portfolio-btn'),
-            dot = document.querySelectorAll('.dot'),
-            slider = document.querySelector('.portfolio-content');
 
-        let tabDots = document.querySelector('.portfolio-dots');
-
+            slider = document.querySelector('.portfolio-content'),
+            tabDots = document.querySelector('.portfolio-dots');
 
 
-        /*New Dots*/
-       /* function addButton() {
+
+        /*DOTS*/
+        for (let i = 0; i < slide.length; i++){
             let newDot = document.createElement('li');
             newDot.classList.add('dot');
             tabDots.append(newDot);
+            if (i === 0) {
+                newDot.classList.add('dot-active');
+            }
         }
-        addButton();*/
+        /*DOTS*/
 
 
 

@@ -31,6 +31,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jsx.switch.disabled" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../js-lesson/js/script.js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,7 +74,7 @@
       <workItem from="1587539363003" duration="12604000" />
       <workItem from="1587559768352" duration="15230000" />
       <workItem from="1587625251260" duration="26280000" />
-      <workItem from="1587715476033" duration="14848000" />
+      <workItem from="1587715476033" duration="21844000" />
     </task>
     <task id="LOCAL-00001" summary="fix 18 lesson">
       <created>1587486956934</created>
@@ -117,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587663508422</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix 22 lesson">
+      <created>1587733101082</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1587733101082</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +151,7 @@
     <MESSAGE value="fix 19 lesson" />
     <MESSAGE value="fix 19 lesson hard" />
     <MESSAGE value="fix 20 lesson" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix 20 lesson" />
+    <MESSAGE value="fix 22 lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 22 lesson" />
   </component>
 </project>
