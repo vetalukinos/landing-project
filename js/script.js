@@ -56,27 +56,17 @@ window.addEventListener('DOMContentLoaded', function() {
     //Toggle Menu
     const toggleMenu = () => {
 
-        const btnMenu = document.querySelector('.menu'),
-            menu = document.querySelector('menu'),
-            body = document.querySelector('body');
+        const menu = document.querySelector('menu');
 
-        /*Handler Menu Function*/
-        const handlerMenu = () => {
-           menu.classList.toggle('active-menu');
-        };
-
-        /*Menu button, close button and close click menu item*/
-        body.addEventListener('click', (event) => {
+        document.body.addEventListener('click', (event) => {
             let target = event.target;
-            if (!target.matches('menu > a[href*="#"]') && !target.matches('ul > li > a[href*="#"]') && !target.closest('.menu')) {
-                return;
-            } /*else {
-                target = target.classList.contains('active-menu');
-                if (target) {
-                    menu.style.display = 'none';
-                }
-            }*/
-            handlerMenu();
+            if (target.closest('.menu')) {
+                menu.classList.add('active-menu');
+            } else if (target.tagName === 'A' || !target.closest('menu')) {
+                menu.classList.remove('active-menu');
+            }
+
+            console.log(target);
         });
 
     };
@@ -197,15 +187,13 @@ window.addEventListener('DOMContentLoaded', function() {
     //Slider
     const slider = () => {
         const slide = document.querySelectorAll('.portfolio-item'),
-            btn = document.querySelectorAll('.portfolio-btn'),
-
+            /*btn = document.querySelectorAll('.portfolio-btn'),*/
             slider = document.querySelector('.portfolio-content'),
             tabDots = document.querySelector('.portfolio-dots');
 
+        let dot;
 
-
-        /*DOTS*/
-        for (let i = 0; i < slide.length; i++){
+        for (let i = 0; i < slide.length; i++) {
             let newDot = document.createElement('li');
             newDot.classList.add('dot');
             tabDots.append(newDot);
@@ -213,9 +201,8 @@ window.addEventListener('DOMContentLoaded', function() {
                 newDot.classList.add('dot-active');
             }
         }
-        /*DOTS*/
 
-
+        dot = document.querySelectorAll('.dot');
 
         //Активный (видимый) слайд
         let currentSlide = 0,
