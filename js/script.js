@@ -313,6 +313,51 @@ window.addEventListener('DOMContentLoaded', function() {
 
     slider();
 
+
+    //Portfolio change photos
+    const commandPhoto = document.querySelectorAll('.command__photo');
+
+    commandPhoto.forEach((elem) => {
+
+        elem.addEventListener('mouseenter', () => {
+            let attrDataImg = elem.getAttribute('data-img');
+            let attrStr = elem.getAttribute('src');
+            elem.setAttribute('src', attrDataImg);
+            elem.setAttribute('data-img', attrStr);
+        });
+
+        elem.addEventListener('mouseleave', () => {
+            let attrDataImg = elem.getAttribute('data-img');
+            let attrStr = elem.getAttribute('src');
+            elem.setAttribute('src', attrDataImg);
+            elem.setAttribute('data-img', attrStr);
+        });
+
+    });
+
+    //Calculator validation
+    const checkInputByNumbers = document.querySelectorAll('.calc-block input[type=number]');
+        checkInputByNumbers.forEach((elem) => {
+        elem.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/, '');
+        })
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
 
