@@ -65,8 +65,6 @@ window.addEventListener('DOMContentLoaded', function() {
             } else if (target.tagName === 'A' || !target.closest('menu')) {
                 menu.classList.remove('active-menu');
             }
-
-            console.log(target);
         });
 
     };
@@ -235,7 +233,7 @@ window.addEventListener('DOMContentLoaded', function() {
         };
 
         //Запускаем слайдер
-        const startSlide = (time = 300000) => {
+        const startSlide = (time = 3000) => {
             /*прокрутка слайдера через каждые ${time} секунды*/
             interval = setInterval(autoPlaySlide, time);
         };
@@ -296,7 +294,7 @@ window.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        startSlide(150000);
+        startSlide(1500);
 
     };
 
@@ -333,19 +331,62 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 
 
+    //Calculator
+    const calc = (price = 100) => {
+
+        const calcBlock = document.querySelector('.calc-block'),
+            calcType = document.querySelector('.calc-type'),
+            calcSquare = document.querySelector('.calc-square'),
+            calcCount = document.querySelector('.calc-count'),
+            calcDay = document.querySelector('.calc-day'),
+            totalValue = document.getElementById('total');
+
+        /*Функция, которая берет значения и считает итоговую сумму*/
+        const countSum = () => {
+            let total = 0,
+                countValue = 1,
+                dayValue = 1;
+            const typeValue = calcType.options[calcType.selectedIndex].value,
+                squareValue = +calcSquare.value;
+
+            /*Количество помещений*/
+            if (calcCount.value > 1) {
+                countValue += (calcCount.value - 1) / 10;
+            }
+
+            /*Срок выполнения*/
+            if (calcDay.value && calcDay.value < 5) {
+               dayValue *= 2;
+            } else if (calcDay.value && calcDay.value < 10) {
+                dayValue *= 1.5;
+            }
+
+            /*Если заполнены оба инпута, то умножаем их на price, если нет - то приравниваем к 0*/
+            if (typeValue && squareValue) {
+                total = price * typeValue * squareValue * countValue * dayValue;
+            }
+
+            totalValue.textContent = total;
+
+        };
+
+
+        calcBlock.addEventListener('change', (event) => {
+            const target = event.target;
+
+            if (target.matches('select') || target.matches('input')) {
+                countSum();
+            }
+        });
+
+
+        /*setInterval(countSum, 5000);*/
 
 
 
+    };
 
-
-
-
-
-
-
-
-
-
+    calc(100);
 
 });
 

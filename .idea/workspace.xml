@@ -31,10 +31,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js-lesson/js/script.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -73,7 +74,12 @@
       <workItem from="1587539363003" duration="12604000" />
       <workItem from="1587559768352" duration="15230000" />
       <workItem from="1587625251260" duration="26280000" />
-      <workItem from="1587715476033" duration="24322000" />
+      <workItem from="1587715476033" duration="24605000" />
+      <workItem from="1587810519930" duration="860000" />
+      <workItem from="1587812109882" duration="240000" />
+      <workItem from="1587813137018" duration="1340000" />
+      <workItem from="1587969843683" duration="11186000" />
+      <workItem from="1587986164560" duration="1117000" />
     </task>
     <task id="LOCAL-00001" summary="fix 18 lesson">
       <created>1587486956934</created>
@@ -131,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587751185409</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix 20 lesson">
+      <created>1587753828095</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587753828095</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,9 +169,9 @@
     <MESSAGE value="fix 18 lesson" />
     <MESSAGE value="fix 19 lesson" />
     <MESSAGE value="fix 19 lesson hard" />
-    <MESSAGE value="fix 20 lesson" />
     <MESSAGE value="fix 22 lesson" />
     <MESSAGE value="fix 21 lesson" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix 21 lesson" />
+    <MESSAGE value="fix 20 lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 20 lesson" />
   </component>
 </project>
