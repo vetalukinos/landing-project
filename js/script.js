@@ -379,11 +379,6 @@ window.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-
-        /*setInterval(countSum, 5000);*/
-
-
-
     };
 
     calc(100);

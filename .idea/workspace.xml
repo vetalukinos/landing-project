@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ee89c64-2d00-4e55-a3a8-34339c0b8c87" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,7 +78,7 @@
       <workItem from="1587812109882" duration="240000" />
       <workItem from="1587813137018" duration="1340000" />
       <workItem from="1587969843683" duration="11186000" />
-      <workItem from="1587986164560" duration="1117000" />
+      <workItem from="1587986164560" duration="1394000" />
     </task>
     <task id="LOCAL-00001" summary="fix 18 lesson">
       <created>1587486956934</created>
@@ -144,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587753828095</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix 23 lesson">
+      <created>1587997549048</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587997549048</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +178,7 @@
     <MESSAGE value="fix 22 lesson" />
     <MESSAGE value="fix 21 lesson" />
     <MESSAGE value="fix 20 lesson" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix 20 lesson" />
+    <MESSAGE value="fix 23 lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 23 lesson" />
   </component>
 </project>
