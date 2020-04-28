@@ -416,6 +416,34 @@
 
 
 <script src="js/script.js"></script>
+<script src="plugins/validator/validator.js"></script>
+
+<script>
+
+	const valid = new Validator({
+		//передаем свойства
+		selector: '#form1',
+		pattern: {
+			phone: /^\+380\d{9}$/,
+			zip: /\d{5,6}/,
+			name: /^а-яА-ЯёЁ$/
+		},
+		method: {
+			'form1-name': [
+				['notEmpty'],
+				['pattern', 'name']
+			],
+		}
+	});
+
+	//Запускаем валидатор (инициализируем)
+	valid.init();
+
+
+
+
+
+</script>
 
 </body>
 </html>
