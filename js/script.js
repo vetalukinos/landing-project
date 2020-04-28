@@ -369,6 +369,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 total = Math.ceil(price * typeValue * squareValue * countValue * dayValue);
             }
 
+            //Перебор цифр
             const totalCounter = () => {
                 count += 5;
                 if (count <= total) {
