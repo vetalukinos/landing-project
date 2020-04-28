@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', function() {
             timerSeconds = document.querySelector('#timer-seconds');
 
         function getZero(num){
-            if (num > 0 && num < 10) {
+            if (num >= 0 && num < 10) {
                 return '0' + num;
             } else {
                 return num;
@@ -97,7 +97,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     scrollAnchors();
 
-    //popUp Block
+    //Popup Block
     const togglePopUp = () => {
 
         const popUp = document.querySelector('.popup'),
@@ -355,7 +355,9 @@ window.addEventListener('DOMContentLoaded', function() {
             }
 
             /*Срок выполнения*/
-            if (calcDay.value && calcDay.value < 5) {
+            if (calcDay.value && calcDay.value < 1) {
+                dayValue *= 1;
+            } else if (calcDay.value && calcDay.value < 5) {
                dayValue *= 2;
             } else if (calcDay.value && calcDay.value < 10) {
                 dayValue *= 1.5;
@@ -363,17 +365,16 @@ window.addEventListener('DOMContentLoaded', function() {
 
             /*Если заполнены оба инпута, то умножаем их на price, если нет - то приравниваем к 0*/
             if (typeValue && squareValue) {
-                total = price * typeValue * squareValue * countValue * dayValue;
+                total = Math.ceil(price * typeValue * squareValue * countValue * dayValue);
             }
 
             totalValue.textContent = total;
 
         };
 
-
         calcBlock.addEventListener('change', (event) => {
             const target = event.target;
-
+            //Если произошли изменения по клику на select или input
             if (target.matches('select') || target.matches('input')) {
                 countSum();
             }
