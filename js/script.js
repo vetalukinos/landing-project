@@ -351,13 +351,15 @@ window.addEventListener('DOMContentLoaded', function() {
                 squareValue = +calcSquare.value;
 
             /*Количество помещений*/
-            if (calcCount.value > 1) {
+            if (calcCount.value && calcCount.value < 1) {
+                countValue = 0;
+            } else if (calcCount.value > 1) {
                 countValue += (calcCount.value - 1) / 10;
             }
 
             /*Срок выполнения*/
             if (calcDay.value && calcDay.value < 1) {
-                dayValue *= 1;
+                dayValue = 0;
             } else if (calcDay.value && calcDay.value < 5) {
                dayValue *= 2;
             } else if (calcDay.value && calcDay.value < 10) {
@@ -367,6 +369,10 @@ window.addEventListener('DOMContentLoaded', function() {
             /*Если заполнены оба инпута, то умножаем их на price, если нет - то приравниваем к 0*/
             if (typeValue && squareValue) {
                 total = Math.ceil(price * typeValue * squareValue * countValue * dayValue);
+            }
+
+            if (dayValue === 0 || countValue === 0) {
+                totalValue.textContent = '0';
             }
 
             //Перебор цифр
