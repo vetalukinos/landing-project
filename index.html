@@ -448,9 +448,22 @@
 		}
 	});
 
+	const valid3 = new Validator({
+		//передаем свойства
+		selector: '#form3',
+		pattern: {},
+		method: {
+			'form3-name': [
+				['notEmpty'],
+				['pattern', 'name']
+			]
+		}
+	});
+
 	//Запускаем валидатор (инициализируем)
 	valid.init();
 	valid2.init();
+	valid3.init();
 
 
 
