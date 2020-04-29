@@ -111,6 +111,14 @@ class Validator {
     Если пользователь передал другой паттерн, то используем паттерн по умолчанию*/
     setPattern() {
 
+        if (!this.pattern.phone) {
+            this.pattern.phone = /^\+?[78]([-()]*\d){10}$/;
+        }
+
+        if (!this.pattern.email) {
+            this.pattern.email = /^\w+@\w+\.\w{2,}$/;
+        }
+
         if (!this.pattern.name) {
             this.pattern.name = /^[А-Яа-яЁё]+$/;
         }
