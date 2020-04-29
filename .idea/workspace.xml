@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6ee89c64-2d00-4e55-a3a8-34339c0b8c87" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/validator/validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/validator/validator.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +86,7 @@
       <workItem from="1587998466897" duration="737000" />
       <workItem from="1588057001514" duration="7954000" />
       <workItem from="1588084319968" duration="7741000" />
-      <workItem from="1588153402258" duration="5957000" />
+      <workItem from="1588153402258" duration="8024000" />
     </task>
     <task id="LOCAL-00001" summary="fix 18 lesson">
       <created>1587486956934</created>
@@ -178,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588093043638</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix 23 lesson">
+      <created>1588173359252</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1588173359252</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
