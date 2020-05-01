@@ -440,9 +440,6 @@ window.addEventListener('DOMContentLoaded', function() {
         form.forEach((elem) => {
             //Навешиваем на форму обработчик событий submit
             elem.addEventListener('submit', (event) => {
-                allInputs.forEach((elem) => {
-                    elem.value = '';
-                });
 
                 event.preventDefault(); //запрещаем перезагрузку страницы
                 elem.appendChild(statusMessage); //помещаем на страницу statusMessage
@@ -466,6 +463,10 @@ window.addEventListener('DOMContentLoaded', function() {
                     statusMessage.classList.remove('sk-spinner-pulse');
                     statusMessage.textContent = errorMessage;
                     console.log(error);
+                });
+
+                allInputs.forEach((elem) => {
+                    elem.value = '';
                 });
             });
         });
