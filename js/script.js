@@ -457,11 +457,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
                 /*Отправляем и обрабатываем запрос на сервер*/
                 postData(body)
-                    .then(outputData => {
+                    .then(() => {
                         statusMessage.classList.remove('sk-spinner-pulse');
                         statusMessage.textContent = successMessage;
                     })
-                    .catch(error => {
+                    .catch(() => {
                         statusMessage.classList.remove('sk-spinner-pulse');
                         statusMessage.textContent = errorMessage;
                     });
