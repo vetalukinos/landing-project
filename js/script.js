@@ -456,14 +456,15 @@ window.addEventListener('DOMContentLoaded', function() {
                 });
 
                 /*Отправляем и обрабатываем запрос на сервер*/
-                postData(body, () => { //функция outputData
-                    statusMessage.classList.remove('sk-spinner-pulse');
-                    statusMessage.textContent = successMessage;
-                }, (error) => { //функция errorData
-                    statusMessage.classList.remove('sk-spinner-pulse');
-                    statusMessage.textContent = errorMessage;
-                    console.log(error);
-                });
+                postData(body)
+                    .then(outputData => {
+                        statusMessage.classList.remove('sk-spinner-pulse');
+                        statusMessage.textContent = successMessage;
+                    })
+                    .catch(error => {
+                        statusMessage.classList.remove('sk-spinner-pulse');
+                        statusMessage.textContent = errorMessage;
+                    });
 
                 allInputs.forEach((elem) => {
                     elem.value = '';
@@ -472,31 +473,25 @@ window.addEventListener('DOMContentLoaded', function() {
         });
 
         /*Функция запроса на сервер*/
-        const postData = (body, outputData, errorData) => {
-            //Пишем запрос к серверу (создаем объект экземпляра XMLHttpRequest)
-            const request = new XMLHttpRequest();
+        const postData = (body) => {
 
-            //Оповещаем пользователя о том, что данные ушли на сервер
-            request.addEventListener('readystatechange', () => {
-                if (request.readyState !== 4) {
-                    return;
-                }
-                if (request.status === 200) {
-                    outputData(); //вызываем функцию outputData
-                } else {
-                    errorData(request.status); //вызываем функцию errorData
-                }
-
+            return new Promise((resolve, reject) => {
+                const request = new XMLHttpRequest();
+                request.open('POST', 'server.php'); //отправляем запрос на сервер через POST
+                request.setRequestHeader('Content-Type', 'application/json');
+                request.addEventListener('readystatechange', () => {
+                    if (request.readyState !== 4) {
+                        return;
+                    }
+                    if (request.status === 200) {
+                        resolve(); //вызываем функцию outputData
+                    } else {
+                        reject(request.status); //вызываем функцию errorData
+                    }
+                });
+                request.send(JSON.stringify(body));
             });
 
-            //настраиваем соединение
-            request.open('POST', 'server.php'); //отправляем запрос на сервер через POST
-
-            //настраиваем заголовки
-            request.setRequestHeader('Content-Type', 'application/json');
-
-            //отправляем данные
-            request.send(JSON.stringify(body));
         }
 
     };

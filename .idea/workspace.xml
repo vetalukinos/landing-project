@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6ee89c64-2d00-4e55-a3a8-34339c0b8c87" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +40,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js-lesson/js/script.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js-promise/js/promiseAPI.js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -95,6 +96,9 @@
       <workItem from="1588153402258" duration="9563000" />
       <workItem from="1588184008993" duration="346000" />
       <workItem from="1588230117217" duration="20058000" />
+      <workItem from="1588325751054" duration="782000" />
+      <workItem from="1588606581194" duration="3699000" />
+      <workItem from="1588661381871" duration="1459000" />
     </task>
     <task id="LOCAL-00001" summary="fix 18 lesson">
       <created>1587486956934</created>
@@ -222,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588252655896</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix 24 lesson">
+      <created>1588325895632</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1588325895632</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,8 +262,8 @@
     <MESSAGE value="fix 21 lesson" />
     <MESSAGE value="fix 20 lesson" />
     <MESSAGE value="fix 23 lesson" />
-    <MESSAGE value="fix 24 lesson" />
     <MESSAGE value="fix 25 lesson" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix 25 lesson" />
+    <MESSAGE value="fix 24 lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 24 lesson" />
   </component>
 </project>
