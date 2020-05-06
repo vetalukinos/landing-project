@@ -408,7 +408,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
         //Сообщения для пользователя
         const errorMessage = 'Что-то пошло не так...',
-            loadMessage = document.getElementById('cube-loader'),
             successMessage = 'Спасибо! Мы скоро с вами свяжемся!';
 
         const form = document.querySelectorAll('form'),
@@ -450,20 +449,24 @@ window.addEventListener('DOMContentLoaded', function() {
                 const formData = new FormData(elem); //получаем все данные из нашей формы
                 /*Получаем объект с нашими данными*/
                 let body = {};
-
                 formData.forEach((val, key) => {
                     body[key] = val;
                 });
 
                 /*Отправляем и обрабатываем запрос на сервер*/
                 postData(body)
-                    .then(() => {
+                    .then((response) => {
+                        if (response.status !== 200) {
+                            /*если статус не 200, то обрабатываем запрос как ошибку*/
+                            throw new Error('status network not 200')
+                        }
                         statusMessage.classList.remove('sk-spinner-pulse');
                         statusMessage.textContent = successMessage;
                     })
-                    .catch(() => {
+                    .catch((error) => {
                         statusMessage.classList.remove('sk-spinner-pulse');
                         statusMessage.textContent = errorMessage;
+                        console.log(error);
                     });
 
                 allInputs.forEach((elem) => {
@@ -474,24 +477,14 @@ window.addEventListener('DOMContentLoaded', function() {
 
         /*Функция запроса на сервер*/
         const postData = (body) => {
-
-            return new Promise((resolve, reject) => {
-                const request = new XMLHttpRequest();
-                request.open('POST', 'server.php'); //отправляем запрос на сервер через POST
-                request.setRequestHeader('Content-Type', 'application/json');
-                request.addEventListener('readystatechange', () => {
-                    if (request.readyState !== 4) {
-                        return;
-                    }
-                    if (request.status === 200) {
-                        resolve(); //вызываем функцию outputData
-                    } else {
-                        reject(request.status); //вызываем функцию errorData
-                    }
-                });
-                request.send(JSON.stringify(body));
+            return fetch('server.php', {
+                method: 'POST', //указывает POST-запрос, т.к. по умолчанию у fetch() идет метод GET
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(body),
+                credentials: 'include'
             });
-
         }
 
     };
