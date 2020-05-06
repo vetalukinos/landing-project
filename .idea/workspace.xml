@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ee89c64-2d00-4e55-a3a8-34339c0b8c87" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
-    </list>
+    <list default="true" id="6ee89c64-2d00-4e55-a3a8-34339c0b8c87" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +99,7 @@
       <workItem from="1588663357197" duration="736000" />
       <workItem from="1588671564169" duration="479000" />
       <workItem from="1588746268568" duration="115000" />
-      <workItem from="1588749569947" duration="3508000" />
+      <workItem from="1588749569947" duration="4215000" />
     </task>
     <task id="LOCAL-00001" summary="fix 18 lesson">
       <created>1587486956934</created>
@@ -251,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588663836643</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="fix 27 lesson">
+      <created>1588755886867</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1588755886867</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +287,7 @@
     <MESSAGE value="fix 25 lesson" />
     <MESSAGE value="fix 24 lesson" />
     <MESSAGE value="fix 26 lesson" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix 26 lesson" />
+    <MESSAGE value="fix 27 lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 27 lesson" />
   </component>
 </project>
